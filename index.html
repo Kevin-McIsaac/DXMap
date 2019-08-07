@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <form id="DXQuestions"  action="">
+
+      <H2>Leaderships and Execution (<div id="LeadershipScore" style="display: inline">0</div>/15)</H1>
+
+      <div class="question">Who is setting your organisation’s transformation vision?<br>
+        <label><input type="radio" name="Who" value=0 >IT/CTO</label><br>
+        <label><input type="radio" name="Who" value=1>Other business unit managers</label><br>
+        <label><input type="radio" name="Who" value=2>CEO/senior leadership team</label><br>
+        <label><input type="radio" name="Who" value=3>Board</label><br>
+      </div>
+
+      <div class="question">Over what timeframe does your organisation’s transformation vision stretch?<br>
+        <label><input type="radio" name="Timeframe" value=0>Less than one year</label><br>
+        <label><input type="radio" name="Timeframe" value=1>One to two years</label><br>
+        <label><input type="radio" name="Timeframe" value=2>Two to three years</label><br>
+        <label><input type="radio" name="Timeframe" value=3>Three to five years or more</label><br>
+      </div>
+
+      <div class="question">How would you rate your organisation’s leadership and culture in terms of acceptance of change?<br>
+        <label><input type="radio" name="Change" value=0>They do not see the need for change</label><br>
+        <label><input type="radio" name="Change" value=1>They see the need but have not developed a change program</label><br>
+        <label><input type="radio" name="Change" value=2>They are developing and communicating a change program</label><br>
+        <label><input type="radio" name="Change" value=3>They have implemented and communicated a change program</label><br>
+      </div>
+
+      <div class="question">Is your organisation able to measure and understand the returns of its transformation program?<br>
+        <label><input type="radio" name="Value" value=0>There are no metrics to measure value</label><br>
+        <label><input type="radio" name="Value" value=1>Metrics are in place but there is no feedback mechanism</label><br>
+        <label><input type="radio" name="Value" value=2>Metrics are used for continuous feedback and improvement</label><br>
+      </div>
+
+      <H2>Data Capability Maturity (<div id="DCMScore" style="display: inline">0</div>/5)</H1>
+
+      <div class="question">What level of data capability is your organisation?<br>
+        <label><input type="radio" name="DCM" value=0>Digitise</label><br>
+        <label><input type="radio" name="DCM" value=1>Consolidate</label><br>
+        <label><input type="radio" name="DCM" value=2>Align</label><br>
+        <label><input type="radio" name="DCM" value=3>Predict</label><br>
+        <label><input type="radio" name="DCM" value=4>Prescribe</label><br>
+      </div>
+      <label>Email address: <input type="email" id="emailaddress" required/> </label><br><br>
+      <input type="submit" class="button " value="Show">
+    </form>
+
+    <svg width="300" height="300" >
+      <rect id="DXMap" width="300" height="300" />
+      <line x1="150" y1="0" x2="150" y2="300" style="stroke:#888888;stroke-width:1" />
+      <line x1="0" y1="150" x2="300" y2="150" style="stroke:#888888;stroke-width:1" />
+      <g>
+        <text fill='#0074d9' x='0' y='0'>0%</text>
+        <text fill='black' x='10' y='290'>Frozen</text>
+        <text fill='black' x='240' y='290'>Failing</text>
+        <text fill='black' x='10' y='20'>Flailing</text>
+        <text fill='black' x='240' y='20'>Flying</text>
+      </g>
+
+      <line id="x-line" class="dotted" x1="0" y1="300" x2="5" y2="300" />
+      <line id="y-line" class="dotted" x1="5" y1="295" x2="5" y2="300" />
+      <circle id="pin" cx="5" cy="295" r="5"  />
+    </svg>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- domo.js optional utils -->
+    <script src="domo.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

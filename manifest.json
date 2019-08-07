@@ -1,0 +1,70 @@
+{
+  "name": "DXMap",
+  "version": "1.0.0",
+  "fullpage": true,
+  "size": {
+    "width": 5,
+    "height": 3
+  },
+  "mapping": [],
+  "collections": [
+    {
+      "name": "DXMap",
+      "schema": {
+        "columns": [
+          {
+            "name": "eMail",
+            "type": "STRING"
+          },
+          {
+            "name": "Date",
+            "type": "DATETIME"
+          },
+          {
+            "name": "Who",
+            "type": "LONG"
+          },
+          {
+            "name": "WhoText",
+            "type": "STRING"
+          },
+          {
+            "name": "Timeframe",
+            "type": "LONG"
+          },
+          {
+            "name": "TimeframeText",
+            "type": "STRING"
+          },
+          {
+            "name": "Change",
+            "type": "LONG"
+          },
+          {
+            "name": "ChangeText",
+            "type": "STRING"
+          },
+          {
+            "name": "Value",
+            "type": "LONG"
+          },
+          {
+            "name": "ValueText",
+            "type": "STRING"
+          },
+          {
+            "name": "DCM",
+            "type": "LONG"
+          },
+          {
+            "name": "DCMText",
+            "type": "STRING"
+          }
+        ]
+      },
+      "syncEnabled": true
+    }
+  ],
+  "id": "f8db4b6b-a3c9-4735-aa8e-1239a44b5bf7",
+  "proxyId": "f8db4b6b-a3c9-4735-aa8e-1239a44b5bf7"
+}
