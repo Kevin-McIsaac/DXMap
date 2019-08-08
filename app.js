@@ -44,7 +44,7 @@ function getScore(id) {
     return isNaN(n) ? 0 : n;
 }
 
-// Magnum utility functions
+// Magnum (AppDB) utility functions
 // These were created before the new libriay/apis were build.
 // Consider replacing or updating.
 function isValidID(id) {return id != null }

@@ -6,6 +6,7 @@ body {
     font-size: 16px;
     margin: 10px;
     width:calc(100% - 20px);
+    background-color: #99CCEE;
 }
 
 .question {
@@ -14,8 +15,10 @@ body {
     padding-bottom: 6px;
 }
 
+#emailaddress {background-color: lightgrey;}
+
 #DXMap {
-    fill: #D4D4D4;
+    fill: white;
     stroke-width:3;
     stroke:rgb(0,0,0)
 }
