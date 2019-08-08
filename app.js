@@ -1,5 +1,6 @@
 var DXMap = {}; //associative array
 
+// Update scores in the headings
 $(document).ready(function(){
   $("input").on("change", function() {
     $("#LeadershipScore").text(LeadershipScore());
@@ -7,6 +8,7 @@ $(document).ready(function(){
 
   });
 
+//Cacluate the position on the map each time a radio buttion is changed
   $( "#DXQuestions").submit(function( event ) {
     pinPoint( 290 *(DCMScore()/4) + 5, 290 *(1- LeadershipScore()/11) + 5);
     DXMap["eMail"] = $('input#emailaddress').val();
@@ -17,6 +19,7 @@ $(document).ready(function(){
   });
 });
 
+// Draw the position as a circile with guidelines.
 function pinPoint(x, y) {
   $("#x-line").attr("y1", y).attr("y2", y).attr("x2", x);
   $("#y-line").attr("x1", x).attr("x2", x).attr("y2", y);
@@ -32,6 +35,7 @@ function DCMScore() {
 	return getScore("DCM")
 }
 
+// Get the value from the radio buttion and convert into an integer
 function getScore(id) {
     var radio = $(`input[name='${id}']:checked`);
     var n = parseInt(radio.val());
@@ -41,7 +45,8 @@ function getScore(id) {
 }
 
 // Magnum utility functions
-
+// These were created before the new libriay/apis were build.
+// Consider replacing or updating.
 function isValidID(id) {return id != null }
 
 function magnumSave(name, doc) {
