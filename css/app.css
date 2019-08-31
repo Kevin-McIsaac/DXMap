@@ -6,7 +6,7 @@ body {
     font-size: 16px;
     margin: 10px;
     width:calc(100% - 20px);
-    background-color: #99CCEE;
+    background-color: #c8e2f4;
 }
 
 .question {
@@ -24,7 +24,7 @@ body {
 }
 
 #pin {
-    fill: #99CCEE
+    fill: #c8e2f4;
 }
 
 .dotted {

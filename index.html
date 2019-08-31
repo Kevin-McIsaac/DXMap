@@ -1,17 +1,33 @@
 <html>
   <head>
-    <link rel="stylesheet" href="app.css" />
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
     <form id="DXQuestions"  action="">
 
-      <H2>Leaderships and Execution (<div id="LeadershipScore" style="display: inline">0</div>/15)</H1>
+      <h2>Leaderships and Execution (<div id="LeadershipScore" style="display: inline">0</div>/15)</h2>
 
-      <div class="question">Who is setting your organisation’s transformation vision?<br>
-        <label><input type="radio" name="Who" value=0 >IT/CTO</label><br>
-        <label><input type="radio" name="Who" value=1>Other business unit managers</label><br>
-        <label><input type="radio" name="Who" value=2>CEO/senior leadership team</label><br>
-        <label><input type="radio" name="Who" value=3>Board</label><br>
+      <div class="question">
+        <p>
+          Who is setting your organisation’s transformation vision?
+        </p>
+        <p>
+          <input name="Who" type="radio" value=1>
+          <span>IT/CTO</span>
+        </p>
+        <p>
+          <input name="Who" type="radio" value=2>
+          <span>Other business unit managers</span>
+        </p>
+        <p>
+          <input name="Who" type="radio" value=3>
+          <span>CEO/senior leadership team</span>
+        </p>
+        <p>
+          <input name="Who" type="radio" value=4>
+          <span>Board</span>
+        </p>
       </div>
 
       <div class="question">Over what timeframe does your organisation’s transformation vision stretch?<br>
@@ -34,7 +50,7 @@
         <label><input type="radio" name="Value" value=2>Metrics are used for continuous feedback and improvement</label><br>
       </div>
 
-      <H2>Data Capability Maturity (<div id="DCMScore" style="display: inline">0</div>/5)</H1>
+      <h2>Data Capability Maturity (<div id="DCMScore" style="display: inline">0</div>/5)</h2>
 
       <div class="question">What level of data capability is your organisation?<br>
         <label><input type="radio" name="DCM" value=0>Digitise – we have applications that have digitised all of the important operational and customer business processes</label><br>
@@ -65,8 +81,9 @@
     </svg>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
     <!-- domo.js optional utils -->
-    <script src="domo.js"></script>
-    <script src="app.js"></script>
+    <script src="js/domo.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
