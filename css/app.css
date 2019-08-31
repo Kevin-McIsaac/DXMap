@@ -39,3 +39,16 @@ body {
     border: none;
     border-radius: 6px;
 }
+
+.color-black {
+    color: rgba(0,0,0,0.87);
+}
+
+.compact {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+}
+
+.pad-bottom {
+    margin-bottom: 18px;
+}
