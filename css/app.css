@@ -10,12 +10,9 @@ body {
 }
 
 .question {
-    margin-bottom: 18px;
-    border-bottom: 1px dashed lightgrey;
-    padding-bottom: 6px;
+    margin-bottom: 14px;
+    padding: 0 12px 6px;
 }
-
-#emailaddress {background-color: lightgrey;}
 
 #DXMap {
     fill: white;
@@ -49,6 +46,10 @@ body {
     margin-block-end: 2px;
 }
 
-.pad-bottom {
-    margin-bottom: 18px;
+.input-field {
+    margin-bottom: 1px;
+}
+
+.row {
+    margin-bottom: 4px;
 }

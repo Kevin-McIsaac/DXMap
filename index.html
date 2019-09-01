@@ -6,7 +6,9 @@
   <body>
     <form id="DXQuestions"  action="">
 
-      <h5 class="pad-bottom">Leaderships and Execution (<div id="LeadershipScore" style="display: inline">0</div>/15)</h5>
+      <div class="row">
+        <h5 class="col">Leaderships and Execution (<div id="LeadershipScore" style="display: inline">0</div>/15)</h5>
+      </div>
 
       <div class="question">
         <p class="compact">
@@ -122,7 +124,9 @@
         </p>
       </div>
 
-      <h5 class="pad-bottom">Data Capability Maturity (<div id="DCMScore" style="display: inline">0</div>/5)</h5>
+      <div class="row">
+        <h5 class="col">Data Capability Maturity (<div id="DCMScore" style="display: inline">0</div>/5)</h5>
+      </div>
 
       <div class="question">
         <p class="compact">
@@ -159,8 +163,67 @@
           </label>
         </p>
       </div>
-      <label>Email address: <input type="email" id="emailaddress" required/> </label><br><br>
-      <input type="submit" class="button " value="Show">
+
+      <div style="margin-top: 25px;">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="firstName" type="text" class="validate" required>
+            <label for="firstName">First Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="lastName" type="text" class="validate" required>
+            <label for="lastName">Last Name</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="companyName" type="text" class="validate" required>
+            <label for="companyName">Company Name</label>
+          </div>
+          <div class="input-field col s6">
+            <select>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="0-49">0-49 employees</option>
+              <option value="50-199">50-199 employees</option>
+              <option value="200-499">200-499 employees</option>
+              <option value="500-999">500-999 employees</option>
+              <option value="1,000-4,999">1,000-4,999 employees</option>
+              <option value="5,000+">5,000+ employees</option>
+            </select>
+            <label>Company Size</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="emailaddress" type="email" class="validate" required>
+            <label for="emailaddress">Email Address</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="phone" type="tel" class="validate" required>
+            <label for="phone">Phone</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6">
+            <select class="materialSelect" id="country" name="country"></select>
+            <label>Country</label>
+          </div>
+          <div class="input-field col s6">
+            <select class="materialSelect" id="state" name="state"></select>
+            <label>State</label>
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="row" style="margin-top: 20px;">
+        <div class="col">
+          <input type="submit" class="button " value="Show">
+        </div>
+      </div>
     </form>
 
     <svg width="300" height="300" >
@@ -182,6 +245,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/materialize.min.js"></script>
+    <script src="js/countries.js"></script>
     <!-- domo.js optional utils -->
     <script src="js/domo.js"></script>
     <script src="js/app.js"></script>

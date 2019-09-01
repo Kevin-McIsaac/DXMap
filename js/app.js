@@ -5,10 +5,9 @@ $(document).ready(function(){
   $("input").on("change", function() {
     $("#LeadershipScore").text(LeadershipScore());
     $("#DCMScore").text(DCMScore());
-
   });
 
-//Cacluate the position on the map each time a radio buttion is changed
+  // Calculate the position on the map each time a radio buttion is changed
   $( "#DXQuestions").submit(function( event ) {
     pinPoint( 290 *(DCMScore()/4) + 5, 290 *(1- LeadershipScore()/11) + 5);
     DXMap["eMail"] = $('input#emailaddress').val();
@@ -16,6 +15,38 @@ $(document).ready(function(){
     console.log(`DXQuestions Submit: `); console.log(DXMap);
     magnumSave("DXMap", DXMap);
     event.preventDefault();
+  });
+
+  // Materialize plugin
+  $('select').formSelect();
+
+  // setup listener for custom event to re-initialize on change
+  $('.materialSelect').on('contentChanged', function() {
+    $(this).formSelect();
+  });
+
+  // Populate countries
+  $("#country").empty();
+  $("#country").append($("<option></option>")
+    .attr("value", -1).text('Select Country'));
+  $.each(country_arr, function(key, value) {
+    $("#country").append($("<option></option>")
+      .attr("value", value).text(value));
+  });
+  $("#country").trigger('contentChanged');
+
+  // Populate states
+  $("#country").change(function() {
+    $("#state").empty();
+    $("#state").append($("<option></option>")
+      .attr("value", -1).text('Select State'));
+    var selectedCountryIndex = $("#country").prop('selectedIndex');
+    var state_arr = s_a[selectedCountryIndex].split("|");
+    $.each(state_arr, function(key, value) {
+      $("#state").append($("<option></option>")
+        .attr("value", value).text(value));
+    });
+    $("#state").trigger('contentChanged');
   });
 });
 
