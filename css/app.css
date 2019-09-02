@@ -38,9 +38,12 @@ body {
 }
 
 [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after,
-.btn, .btn-large, .btn-small,
-.btn:hover, .btn-large:hover, .btn-small:hover {
+.btn, .btn-large, .btn-small {
     background-color: #ed8003;
+}
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+    background-color: #fc9927;
 }
 
 input {
