@@ -10,9 +10,20 @@ $(document).ready(function(){
   // Calculate the position on the map each time a radio buttion is changed
   $( "#DXQuestions").submit(function( event ) {
     pinPoint( 290 *(DCMScore()/4) + 5, 290 *(1- LeadershipScore()/11) + 5);
+
+    // Get values
+    DXMap["FirstName"] = $("#firstName").val();
+    DXMap["LastName"] = $("#lastName").val();
+    DXMap["CompanyName"] = $("#companyName").val();
     DXMap["eMail"] = $('input#emailaddress').val();
+    DXMap["CompanySize"] = $("#companySize").val();
+    DXMap["Phone"] = $("#phone").val();
+    DXMap["Country"] = $("#country").val();
+    DXMap["State"] = $("#state").val();
+    DXMap["Role"] = $("#role").val();
+    DXMap["Industry"] = $("#industry").val();
     DXMap["Date"] = new Date().toISOString();
-    console.log(`DXQuestions Submit: `); console.log(DXMap);
+
     magnumSave("DXMap", DXMap);
     event.preventDefault();
   });
@@ -87,7 +98,6 @@ function getScore(id) {
 function isValidID(id) {return id != null }
 
 function magnumSave(name, doc) {
-  console.log(`magnumSave ${name}`)
   if (doc.id) { return magnumUpdateDoc(name, doc)}
   else { return magnumCreateDoc(name, doc)}
 }

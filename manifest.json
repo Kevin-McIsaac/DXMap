@@ -12,54 +12,27 @@
       "name": "DXMap",
       "schema": {
         "columns": [
-          {
-            "name": "eMail",
-            "type": "STRING"
-          },
-          {
-            "name": "Date",
-            "type": "DATETIME"
-          },
-          {
-            "name": "Who",
-            "type": "LONG"
-          },
-          {
-            "name": "WhoText",
-            "type": "STRING"
-          },
-          {
-            "name": "Timeframe",
-            "type": "LONG"
-          },
-          {
-            "name": "TimeframeText",
-            "type": "STRING"
-          },
-          {
-            "name": "Change",
-            "type": "LONG"
-          },
-          {
-            "name": "ChangeText",
-            "type": "STRING"
-          },
-          {
-            "name": "Value",
-            "type": "LONG"
-          },
-          {
-            "name": "ValueText",
-            "type": "STRING"
-          },
-          {
-            "name": "DCM",
-            "type": "LONG"
-          },
-          {
-            "name": "DCMText",
-            "type": "STRING"
-          }
+          {"name": "FirstName", "type": "STRING"},
+          {"name": "LastName", "type": "STRING"},
+          {"name": "CompanyName", "type": "STRING"},
+          {"name": "CompanySize", "type": "STRING"},
+          {"name": "eMail", "type": "STRING"},
+          {"name": "Phone", "type": "STRING"},
+          {"name": "Country", "type": "STRING"},
+          {"name": "State", "type": "STRING"},
+          {"name": "Role", "type": "STRING"},
+          {"name": "Industry", "type": "STRING"},
+          {"name": "Date", "type": "DATETIME"},
+          {"name": "Who", "type": "LONG"},
+          {"name": "WhoText", "type": "STRING"},
+          {"name": "Timeframe", "type": "LONG"},
+          {"name": "TimeframeText", "type": "STRING"},
+          {"name": "Change", "type": "LONG"},
+          {"name": "ChangeText", "type": "STRING"},
+          {"name": "Value", "type": "LONG"},
+          {"name": "ValueText", "type": "STRING"},
+          {"name": "DCM", "type": "LONG"},
+          {"name": "DCMText", "type": "STRING"}
         ]
       },
       "syncEnabled": true
