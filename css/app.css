@@ -6,6 +6,7 @@ body {
     font-size: 16px;
     margin: 10px;
     width:calc(100% - 20px);
+    color: rgba(0,0,0,0.8);
     background-color: #c8e2f4;
 }
 
@@ -30,20 +31,34 @@ body {
     stroke-dasharray:5,5;
 }
 
-.button {
-    background-color: #FC9927;
-    padding: 4px 11px;
-    border: none;
-    border-radius: 6px;
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:before,
+[type="radio"].with-gap:checked+span:after {
+    border-color: #ed8003;
+}
+
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after,
+.btn, .btn-large, .btn-small,
+.btn:hover, .btn-large:hover, .btn-small:hover {
+    background-color: #ed8003;
+}
+
+input {
+    color: inherit;
 }
 
 .color-black {
-    color: rgba(0,0,0,0.87);
+    color: inherit;
 }
 
 .compact {
     margin-block-start: 2px;
     margin-block-end: 2px;
+}
+
+.dropdown-content li>a,
+.dropdown-content li>span {
+    color: rgba(0,0,0,0.8);
 }
 
 .input-field {

@@ -28,24 +28,30 @@ $(document).ready(function(){
   // Populate countries
   $("#country").empty();
   $("#country").append($("<option></option>")
-    .attr("value", -1).text('Select Country'));
+    .attr("value", -1)
+    .attr("disabled", "disabled")
+    .text('Select Country'));
   $.each(country_arr, function(key, value) {
     $("#country").append($("<option></option>")
       .attr("value", value).text(value));
   });
+  $("#country").val(-1);
   $("#country").trigger('contentChanged');
 
   // Populate states
   $("#country").change(function() {
     $("#state").empty();
     $("#state").append($("<option></option>")
-      .attr("value", -1).text('Select State'));
+      .attr("value", -1)
+      .attr("disabled", "disabled")
+      .text('Select State'));
     var selectedCountryIndex = $("#country").prop('selectedIndex');
     var state_arr = s_a[selectedCountryIndex].split("|");
     $.each(state_arr, function(key, value) {
       $("#state").append($("<option></option>")
         .attr("value", value).text(value));
     });
+    $("#state").val(-1);
     $("#state").trigger('contentChanged');
   });
 });
