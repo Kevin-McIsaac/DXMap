@@ -15,22 +15,6 @@ body {
     padding: 0 12px 6px;
 }
 
-#DXMap {
-    fill: white;
-    stroke-width:3;
-    stroke:rgb(0,0,0)
-}
-
-#pin {
-    fill: #c8e2f4;
-}
-
-.dotted {
-    stroke:#555555;
-    stroke-width:1;
-    stroke-dasharray:5,5;
-}
-
 [type="radio"]:checked+span:after,
 [type="radio"].with-gap:checked+span:before,
 [type="radio"].with-gap:checked+span:after {
@@ -74,4 +58,90 @@ input {
 
 .row {
     margin-bottom: 4px;
+}
+
+/* Wrapper for chart */
+.wrapper {
+    position: relative;
+}
+.y-axis {
+    font-size: 18px;
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    margin-left: -30px;
+    margin-bottom: -120px;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+/* Four quadrants */
+.ws-basic-card-default {
+    height: 75%;
+    position: relative;
+    background-color: #eeeeee;
+}
+.ws-basic-card-default p {
+    padding-left: 8px;
+    margin: 0;
+}
+.ws-basic-card-default p.lab-value {
+    padding-top: 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.ws-basic-card-default .tl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50%;
+    bottom: 50%;
+    border: solid #c8e2f4;
+    border-width: 0 4px 4px 0;
+}
+.ws-basic-card-default .tr {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 50%;
+    border: solid #c8e2f4;
+    border-width: 0 0 4px 0;
+}
+.ws-basic-card-default .bl {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 50%;
+    bottom: 0;
+    border: solid #c8e2f4;
+    border-width: 0 4px 0 0;
+}
+.ws-basic-card-default .br {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+}
+
+/* Chart marker */
+.dot {
+  height: 30px;
+  width: 30px;
+  background-color: #fc8f13;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  margin-top: -17px;
+  margin-left: -17px;
+  opacity: 0.8;
 }

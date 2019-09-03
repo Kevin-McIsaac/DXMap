@@ -2,14 +2,19 @@ var DXMap = {}; //associative array
 
 // Update scores in the headings
 $(document).ready(function(){
-  $("input").on("change", function() {
+  $('input[type="radio"]').on("change", function() {
     $("#LeadershipScore").text(LeadershipScore());
     $("#DCMScore").text(DCMScore());
   });
 
   // Calculate the position on the map each time a radio buttion is changed
   $( "#DXQuestions").submit(function( event ) {
-    pinPoint( 290 *(DCMScore()/4) + 5, 290 *(1- LeadershipScore()/11) + 5);
+    var left = (DCMScore() / 5) * 100;
+    var top = (1 - (LeadershipScore() / 15)) * 100;
+    $("#chartMarker")
+      .css('left', left + '%')
+      .css('top', top + '%');
+    $("#chartMarker").show();
 
     // Get values
     DXMap["FirstName"] = $("#firstName").val();
@@ -67,14 +72,6 @@ $(document).ready(function(){
   });
 });
 
-// Draw the position as a circile with guidelines.
-function pinPoint(x, y) {
-  $("#x-line").attr("y1", y).attr("y2", y).attr("x2", x);
-  $("#y-line").attr("x1", x).attr("x2", x).attr("y2", y);
-  $("#pin").attr("cy", y).attr("cx", x) ;
-}
-
-
 function LeadershipScore() {
 	return getScore("Who") + getScore("Timeframe") +  getScore("Change") +  getScore("Value")
 }
@@ -115,7 +112,7 @@ function magnumCreateDoc(name, doc) {
   })
   .done(function(data){
     doc.id = data.id;
-    console.log(`SUCESS: magnumCreateDoc ${name} id = ${doc.id} ... `); console.log(doc);
+    console.log(`SUCESS: magnumCreateDoc ${name} id = ${doc.id} ... `);
   })
   .fail(function(xhr) {
     console.log(`FAIL: magnumCreateDoc ${name}:`, xhr);
@@ -136,7 +133,7 @@ function magnumUpdateDoc(name, doc){
     data: JSON.stringify({"content": doc})
   })
   .done(function(data){
-    console.log(`SUCESS: magnumUpdateDoc ${name} id = ${doc.id} ... `); //console.log(doc);
+    console.log(`SUCESS: magnumUpdateDoc ${name} id = ${doc.id} ... `);
   })
   .fail(function(xhr) {
     console.log(`FAIL: magnumUpdateDoc ${name}:`, xhr);
