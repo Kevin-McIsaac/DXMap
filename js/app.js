@@ -7,8 +7,8 @@ $(document).ready(function(){
     $("#DCMScore").text(DCMScore());
   });
 
-  // Calculate the position on the map each time a radio buttion is changed
   $( "#DXQuestions").submit(function( event ) {
+    // Calculate the position on the map
     var left = (DCMScore() / 5) * 100;
     var top = (1 - (LeadershipScore() / 15)) * 100;
     $("#chartMarker")

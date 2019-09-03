@@ -15,6 +15,14 @@ body {
     padding: 0 12px 6px;
 }
 
+.primary {
+    color: inherit;
+}
+
+.secondary {
+    color: rgba(0,0,0,0.4);
+}
+
 [type="radio"]:checked+span:after,
 [type="radio"].with-gap:checked+span:before,
 [type="radio"].with-gap:checked+span:after {
@@ -35,10 +43,6 @@ body {
 }
 
 input {
-    color: inherit;
-}
-
-.color-black {
     color: inherit;
 }
 
