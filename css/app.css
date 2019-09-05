@@ -12,7 +12,7 @@ body {
 
 .question {
     margin-bottom: 14px;
-    padding: 0 12px 6px;
+    padding: 0 4px 6px;
 }
 
 .primary {
@@ -32,6 +32,10 @@ body {
 [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after,
 .btn, .btn-large, .btn-small {
     background-color: #fc8f13;
+}
+
+[type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
+    display: inline-table;
 }
 
 .btn:hover, .btn-large:hover, .btn-small:hover {
@@ -60,8 +64,16 @@ input {
     margin-bottom: 1px;
 }
 
+.input-field.col label {
+    left: 4px;
+}
+
 .row {
     margin-bottom: 4px;
+}
+
+.row .col {
+    padding: 0 4px;
 }
 
 /* Wrapper for chart */
@@ -73,7 +85,6 @@ input {
     position: absolute;
     bottom: 50%;
     left: 0;
-    margin-left: -30px;
     margin-bottom: -120px;
     -webkit-transform: rotate(270deg);
     -moz-transform: rotate(270deg);

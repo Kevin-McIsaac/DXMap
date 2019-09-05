@@ -29,7 +29,7 @@ $(document).ready(function(){
     DXMap["Industry"] = $("#industry").val();
     DXMap["Date"] = new Date().toISOString();
 
-    magnumSave("DXMap", DXMap);
+    // magnumSave("DXMap", DXMap);
     event.preventDefault();
   });
 
