@@ -71,6 +71,7 @@ $(document).ready(function(){
     $("#state").trigger('contentChanged');
   });
 
+  // Set chart height equal to width
   var cw = $("#chart").width();
   $("#chart").css({"height": cw + 'px'});
 });
