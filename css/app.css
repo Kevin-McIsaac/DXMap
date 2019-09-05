@@ -46,6 +46,11 @@ input {
     color: inherit;
 }
 
+[type="radio"]:not(:checked)+span,
+[type="radio"]:checked+span {
+    display: inline-table;
+}
+
 .compact {
     margin-block-start: 2px;
     margin-block-end: 2px;
