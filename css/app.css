@@ -76,6 +76,10 @@ input {
     padding: 0 4px;
 }
 
+ul:not(.browser-default) {
+    max-height: 500px;
+}
+
 /* Wrapper for chart */
 .wrapper {
     position: relative;

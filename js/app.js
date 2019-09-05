@@ -70,6 +70,9 @@ $(document).ready(function(){
     $("#state").val(-1);
     $("#state").trigger('contentChanged');
   });
+
+  var cw = $("#chart").width();
+  $("#chart").css({"height": cw + 'px'});
 });
 
 function LeadershipScore() {
