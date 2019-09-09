@@ -8,9 +8,12 @@ $(document).ready(function(){
   });
 
   $( "#DXQuestions").submit(function( event ) {
+    var DCMScoreVal = DCMScore();
+    var LeadershipScoreVal = LeadershipScore();
+
     // Calculate the position on the map
-    var left = (DCMScore() / 5) * 100;
-    var top = (1 - (LeadershipScore() / 15)) * 100;
+    var left = (DCMScoreVal / 5) * 100;
+    var top = (1 - (LeadershipScoreVal / 15)) * 100;
     $("#chartMarker")
       .css('left', left + '%')
       .css('top', top + '%');
@@ -20,14 +23,28 @@ $(document).ready(function(){
     DXMap["FirstName"] = $("#firstName").val();
     DXMap["LastName"] = $("#lastName").val();
     DXMap["CompanyName"] = $("#companyName").val();
+    DXMap["Role"] = $("#role").val();
     DXMap["eMail"] = $('input#emailaddress').val();
-    DXMap["CompanySize"] = $("#companySize").val();
     DXMap["Phone"] = $("#phone").val();
     DXMap["Country"] = $("#country").val();
     DXMap["State"] = $("#state").val();
-    DXMap["Role"] = $("#role").val();
-    DXMap["Industry"] = $("#industry").val();
     DXMap["Date"] = new Date().toISOString();
+
+    // Convert scores
+    if (LeadershipScoreVal >= 0 && LeadershipScoreVal <= 1) {
+      DXMap["LeadershipScorePercent"] = 0;
+    } else if (LeadershipScoreVal >= 2 && LeadershipScoreVal <= 4) {
+      DXMap["LeadershipScorePercent"] = 20;
+    } else if (LeadershipScoreVal >= 5 && LeadershipScoreVal <= 7) {
+      DXMap["LeadershipScorePercent"] = 40;
+    } else if (LeadershipScoreVal >= 8 && LeadershipScoreVal <= 10) {
+      DXMap["LeadershipScorePercent"] = 60;
+    } else if (LeadershipScoreVal >= 11 && LeadershipScoreVal <= 13) {
+      DXMap["LeadershipScorePercent"] = 80;
+    } else {
+      DXMap["LeadershipScorePercent"] = 100;
+    }
+    DXMap["DCMScorePercent"] = DCMScoreVal * 20;
 
     magnumSave("DXMap", DXMap);
     event.preventDefault();
@@ -70,6 +87,10 @@ $(document).ready(function(){
     $("#state").val(-1);
     $("#state").trigger('contentChanged');
   });
+
+  // Set chart height equal to width
+  var cw = $("#chart").width();
+  $("#chart").css({"height": cw + 'px'});
 });
 
 function LeadershipScore() {

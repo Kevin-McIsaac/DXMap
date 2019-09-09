@@ -182,16 +182,15 @@
             <label for="companyName">Company Name</label>
           </div>
           <div class="input-field col s6">
-            <select id="companySize">
+            <select id="role">
               <option value="" disabled selected>Choose your option</option>
-              <option value="0-49">0-49 employees</option>
-              <option value="50-199">50-199 employees</option>
-              <option value="200-499">200-499 employees</option>
-              <option value="500-999">500-999 employees</option>
-              <option value="1,000-4,999">1,000-4,999 employees</option>
-              <option value="5,000+">5,000+ employees</option>
+              <option value="C-Level Executive">C-Level Executive</option>
+              <option value="Sr VP & VP">Sr VP & VP</option>
+              <option value="Sr Director & Director">Sr Director & Director</option>
+              <option value="Sr Manager & Manager">Sr Manager & Manager</option>
+              <option value="Data Analyst">Data Analyst</option>
             </select>
-            <label for="companySize">Company Size</label>
+            <label for="role">Role</label>
           </div>
         </div>
 
@@ -217,35 +216,6 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="input-field col s6">
-            <select id="role">
-              <option value="" disabled selected>Choose your option</option>
-              <option value="C-Level Executive">C-Level Executive</option>
-              <option value="Sr VP & VP">Sr VP & VP</option>
-              <option value="Sr Director & Director">Sr Director & Director</option>
-              <option value="Sr Manager & Manager">Sr Manager & Manager</option>
-              <option value="Data Analyst">Data Analyst</option>
-            </select>
-            <label for="role">Role</label>
-          </div>
-          <div class="input-field col s6">
-            <select id="industry">
-              <option value="" disabled selected>Choose your option</option>
-              <option value="Advertising, Media, Publishing">Advertising, Media, Publishing</option>
-              <option value="Agency & Consulting">Agency & Consulting</option>
-              <option value="Financial Services">Financial Services</option>
-              <option value="Healthcare">Healthcare</option>
-              <option value="High Tech">High Tech</option>
-              <option value="Manufacturing/Automotive">Manufacturing/Automotive</option>
-              <option value="Retail & eCommerce">Retail & eCommerce</option>
-              <option value="Travel, Hospitality & Entertainment">Travel, Hospitality & Entertainment</option>
-              <option value="Other">Other</option>
-            </select>
-            <label for="industry">Industry</label>
-          </div>
-        </div>
-
       </div>
       
       <div class="row" style="margin-top: 20px;">
@@ -259,73 +229,24 @@
     </form>
 
     <!-- Start of chart -->
-    <div class="row" style="margin-top: 30px;">
-      <div class="col s7 offset-s2 wrapper">
-        <div class="row">
-          <div class="col s1" style="height: 75%;">
-            <div class="row">
-              <div class="col y-axis">Vision & Leadership</div>
-              <div class="col" style="width: 100%;">
-                <div class="secondary" style="height: 25%; text-align: right;">100</div>
-                <div class="secondary" style="height: 25%; margin-top: -8px; text-align: right;">75</div>
-                <div class="secondary" style="height: 25%; margin-top: -8px; text-align: right;">50</div>
-                <div class="secondary" style="height: 25%; margin-top: -8px; text-align: right;">25</div>
-                <div class="secondary" style="text-align: right;">0</div>
-              </div>
-            </div>
-          </div>
-          <div class="col s11">
-            <div class="ws-basic-card-default">
-              <div class="tl">
-                <p class="lab-value">Flailing</p>
-              </div>
-              <div class="tr">
-                <p class="lab-value">Flying</p>
-              </div>
-              <div class="bl">
-                <p class="lab-value">Frozen</p>
-              </div>
-              <div class="br">
-                <p class="lab-value">Failing</p>
-              </div>
-              <span class="dot" id="chartMarker" style="display: none;"></span>
-            </div>
-          </div>
+    <div class="row wrapper" style="margin-top: 30px; max-width: 570px;">
+      <div id="chart" class="col ws-basic-card-default" style="width: 100%;">
+        <div class="tl">
+          <p class="lab-value">Flailing</p>
         </div>
-        <div class="row" style="padding-top: 10px;">
-          <div class="col s11 offset-s1">
-            <div class="row secondary">
-              <div class="col" style="width: 20%; padding: 0;">
-                <span style="margin-left: 8px;">0</span>
-              </div>
-              <div class="col" style="width: 20%; padding: 0;">
-                <span style="position: relative; left: -9px;">20</span><br>
-                <span style="position: relative; left: -32px;">Digitised</span>
-              </div>
-              <div class="col" style="width: 20%; padding: 0;">
-                <span style="position: relative; left: -9px;">40</span><br>
-                <span style="position: relative; left: -40px;">Consolidate</span>
-              </div>
-              <div class="col" style="width: 20%; padding: 0;">
-                <span style="position: relative; left: -9px;">60</span><br>
-                <span style="position: relative; left: -38px;">Descriptive</span>
-              </div>
-              <div class="col" style="width: 10%; padding: 0;">
-                <span style="position: relative; left: -9px;">80</span><br>
-                <span style="position: relative; left: -35px;">Predictive</span>
-              </div>
-              <div class="col" style="width: 10%; padding: 0; text-align: right;">
-                <span>100</span><br>
-                <span style="position: relative; right: -10px;">Prescriptive</span>
-              </div>
-            </div>
-            <div class="row" style="margin-top: 18px; text-align: center; font-size: 18px;">
-              Data Capability Maturity
-            </div>
-          </div>
+        <div class="tr">
+          <p class="lab-value">Flying</p>
         </div>
+        <div class="bl">
+          <p class="lab-value">Frozen</p>
+        </div>
+        <div class="br">
+          <p class="lab-value">Failing</p>
+        </div>
+        <span class="dot" id="chartMarker" style="display: none;"></span>
       </div>
     </div>
+    <!-- End of chart -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/materialize.min.js"></script>

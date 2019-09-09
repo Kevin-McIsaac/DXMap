@@ -12,7 +12,7 @@ body {
 
 .question {
     margin-bottom: 14px;
-    padding: 0 12px 6px;
+    padding: 0 4px 6px;
 }
 
 .primary {
@@ -32,6 +32,10 @@ body {
 [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after,
 .btn, .btn-large, .btn-small {
     background-color: #fc8f13;
+}
+
+[type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
+    display: inline-table;
 }
 
 .btn:hover, .btn-large:hover, .btn-small:hover {
@@ -65,31 +69,25 @@ input {
     margin-bottom: 1px;
 }
 
+.input-field.col label {
+    left: 4px;
+}
+
 .row {
     margin-bottom: 4px;
+}
+
+.row .col {
+    padding: 0 4px;
+}
+
+ul:not(.browser-default) {
+    max-height: 500px;
 }
 
 /* Wrapper for chart */
 .wrapper {
     position: relative;
-}
-.y-axis {
-    font-size: 18px;
-    position: absolute;
-    bottom: 50%;
-    left: 0;
-    margin-left: -30px;
-    margin-bottom: -120px;
-    -webkit-transform: rotate(270deg);
-    -moz-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
-    transform: rotate(270deg);
-    -webkit-transform-origin: 0 0;
-    -moz-transform-origin: 0 0;
-    -ms-transform-origin: 0 0;
-    -o-transform-origin: 0 0;
-    transform-origin: 0 0;
 }
 
 /* Four quadrants */

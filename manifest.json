@@ -12,32 +12,95 @@
       "name": "DXMap",
       "schema": {
         "columns": [
-          {"name": "FirstName", "type": "STRING"},
-          {"name": "LastName", "type": "STRING"},
-          {"name": "CompanyName", "type": "STRING"},
-          {"name": "CompanySize", "type": "STRING"},
-          {"name": "eMail", "type": "STRING"},
-          {"name": "Phone", "type": "STRING"},
-          {"name": "Country", "type": "STRING"},
-          {"name": "State", "type": "STRING"},
-          {"name": "Role", "type": "STRING"},
-          {"name": "Industry", "type": "STRING"},
-          {"name": "Date", "type": "DATETIME"},
-          {"name": "Who", "type": "LONG"},
-          {"name": "WhoText", "type": "STRING"},
-          {"name": "Timeframe", "type": "LONG"},
-          {"name": "TimeframeText", "type": "STRING"},
-          {"name": "Change", "type": "LONG"},
-          {"name": "ChangeText", "type": "STRING"},
-          {"name": "Value", "type": "LONG"},
-          {"name": "ValueText", "type": "STRING"},
-          {"name": "DCM", "type": "LONG"},
-          {"name": "DCMText", "type": "STRING"}
+          {
+            "name": "FirstName",
+            "type": "STRING"
+          },
+          {
+            "name": "LastName",
+            "type": "STRING"
+          },
+          {
+            "name": "CompanyName",
+            "type": "STRING"
+          },
+          {
+            "name": "eMail",
+            "type": "STRING"
+          },
+          {
+            "name": "Phone",
+            "type": "STRING"
+          },
+          {
+            "name": "Country",
+            "type": "STRING"
+          },
+          {
+            "name": "State",
+            "type": "STRING"
+          },
+          {
+            "name": "Role",
+            "type": "STRING"
+          },
+          {
+            "name": "Date",
+            "type": "DATETIME"
+          },
+          {
+            "name": "Who",
+            "type": "LONG"
+          },
+          {
+            "name": "WhoText",
+            "type": "STRING"
+          },
+          {
+            "name": "Timeframe",
+            "type": "LONG"
+          },
+          {
+            "name": "TimeframeText",
+            "type": "STRING"
+          },
+          {
+            "name": "Change",
+            "type": "LONG"
+          },
+          {
+            "name": "ChangeText",
+            "type": "STRING"
+          },
+          {
+            "name": "Value",
+            "type": "LONG"
+          },
+          {
+            "name": "ValueText",
+            "type": "STRING"
+          },
+          {
+            "name": "DCM",
+            "type": "LONG"
+          },
+          {
+            "name": "DCMText",
+            "type": "STRING"
+          },
+          {
+            "name": "LeadershipScorePercent",
+            "type": "LONG"
+          },
+          {
+            "name": "DCMScorePercent",
+            "type": "LONG"
+          }
         ]
       },
       "syncEnabled": true
     }
   ],
-  "proxyId": "59da4def-4088-49a5-a6fc-695c8194d939",
-  "id": "a5db4d49-d134-4bb8-bc29-d356c8c95628"
+  "proxyId": "673ee316-297d-4c32-b480-2f6875d87e5e",
+  "id": "6ef5d20f-0252-4b74-9e04-e477ed08abc1"
 }
