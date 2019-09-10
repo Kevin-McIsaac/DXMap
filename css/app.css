@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+html,
+body {
+    font-family: "Open Sans","Helvetica Neue",Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    margin: 10px;
+    width:calc(100% - 20px);
+    color: rgba(0,0,0,0.8);
+    background-color: #c8e2f4;
+}
+
+.question {
+    margin-bottom: 14px;
+    padding: 0 4px 6px;
+}
+
+.primary {
+    color: inherit;
+}
+
+.secondary {
+    color: rgba(0,0,0,0.4);
+}
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:before,
+[type="radio"].with-gap:checked+span:after {
+    border-color: #fc8f13;
+}
+
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after,
+.btn, .btn-large, .btn-small {
+    background-color: #fc8f13;
+}
+
+[type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
+    display: inline-table;
+}
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+    background-color: #fc9927;
+}
+
+.btn:focus, .btn-large:focus, .btn-small:focus, .btn-floating:focus {
+    background-color: #ed8003;
+}
+
+input {
+    color: inherit;
+}
+
+[type="radio"]:not(:checked)+span,
+[type="radio"]:checked+span {
+    display: inline-table;
+}
+
+.compact {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+}
+
+.dropdown-content li>a,
+.dropdown-content li>span {
+    color: rgba(0,0,0,0.8);
+}
+
+.input-field {
+    margin-bottom: 1px;
+}
+
+.input-field.col label {
+    left: 4px;
+}
+
+.row {
+    margin-bottom: 4px;
+}
+
+.row .col {
+    padding: 0 4px;
+}
+
+ul:not(.browser-default) {
+    max-height: 500px;
+}
+
+/* Wrapper for chart */
+.wrapper {
+    position: relative;
+}
+
+/* Four quadrants */
+.ws-basic-card-default {
+    height: 75%;
+    position: relative;
+    background-color: #eeeeee;
+}
+.ws-basic-card-default p {
+    padding-left: 8px;
+    margin: 0;
+}
+.ws-basic-card-default p.lab-value {
+    padding-top: 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.ws-basic-card-default .tl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50%;
+    bottom: 50%;
+    border: solid #c8e2f4;
+    border-width: 0 4px 4px 0;
+}
+.ws-basic-card-default .tr {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 50%;
+    border: solid #c8e2f4;
+    border-width: 0 0 4px 0;
+}
+.ws-basic-card-default .bl {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 50%;
+    bottom: 0;
+    border: solid #c8e2f4;
+    border-width: 0 4px 0 0;
+}
+.ws-basic-card-default .br {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+}
+
+/* Chart marker */
+.dot {
+  height: 30px;
+  width: 30px;
+  background-color: #fc8f13;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  margin-top: -17px;
+  margin-left: -17px;
+  opacity: 0.8;
+}
