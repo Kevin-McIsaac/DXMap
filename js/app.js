@@ -91,6 +91,31 @@ $(document).ready(function(){
   // Set chart height equal to width
   var cw = $("#chart").width();
   $("#chart").css({"height": cw + 'px'});
+
+  // l10n - localizations
+  var origin;
+  if (location.hash) {
+    String.locale = location.hash.substr(1);	
+  }
+  
+  var localize = function (string, fallback) {
+    var localized = string.toLocaleString();
+    if (localized !== string) {
+      return localized;
+    } else {
+      return fallback;
+    }
+  };
+
+  $.getJSON("../localizations/english.json", function(data) {
+    $.each(data, function(key, val) {
+      var divId = "#" + key.substr(1);
+      origin = $(divId).html();
+      $(divId).html(localize(key, origin));
+    });
+  });
+  
+  document.documentElement.lang = String.locale || document.documentElement.lang;
 });
 
 function LeadershipScore() {
