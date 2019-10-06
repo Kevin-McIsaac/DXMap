@@ -31,5 +31,28 @@
   "%dcm-question-option2": "Consolidate – we have brought together in a single repository all of the digitised information from all of our key applications",
   "%dcm-question-option3": "Align – we are able to align the consolidated data from multiple applications to generate actionable insights",
   "%dcm-question-option4": "Predict – we can use our aligned data to generate predictions about key business outcomes",
-  "%dcm-question-option5": "Prescribe – we automatically prescribe the best course of action, based on the predictions of the aligned data"
+  "%dcm-question-option5": "Prescribe – we automatically prescribe the best course of action, based on the predictions of the aligned data",
+
+  "%lbl-first-name": "First Name",
+  "%lbl-last-name": "Last Name",
+  "%lbl-company-name": "Company Name",
+  "%lbl-role": "Role",
+  "%lbl-email": "Email Address",
+  "%lbl-phone": "Phone",
+  "%lbl-country": "Country",
+  "%lbl-state": "State",
+
+  "%opt-role-0": "Choose your option",
+  "%opt-role-1": "C-Level Executive",
+  "%opt-role-2": "Sr VP & VP",
+  "%opt-role-3": "Sr Director & Director",
+  "%opt-role-4": "Sr Manager & Manager",
+  "%opt-role-5": "Data Analyst",
+
+  "%btn-show": "Show",
+
+  "%txt-flailing": "Flailing",
+  "%txt-flying": "Flying",
+  "%txt-frozen": "Frozen",
+  "%txt-failing": "Failing"
 }

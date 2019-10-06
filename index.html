@@ -213,18 +213,18 @@
         <div class="row">
           <div class="input-field col s6">
             <input id="firstName" type="text" class="validate" required>
-            <label for="firstName">First Name</label>
+            <label id="lbl-first-name" for="firstName">First Name</label>
           </div>
           <div class="input-field col s6">
             <input id="lastName" type="text" class="validate" required>
-            <label for="lastName">Last Name</label>
+            <label id="lbl-last-name" for="lastName">Last Name</label>
           </div>
         </div>
 
         <div class="row">
           <div class="input-field col s6">
             <input id="companyName" type="text" class="validate" required>
-            <label for="companyName">Company Name</label>
+            <label id="lbl-company-name" for="companyName">Company Name</label>
           </div>
           <div class="input-field col s6">
             <select id="role">
@@ -235,29 +235,29 @@
               <option value="Sr Manager & Manager">Sr Manager & Manager</option>
               <option value="Data Analyst">Data Analyst</option>
             </select>
-            <label for="role">Role</label>
+            <label id="lbl-role" for="role">Role</label>
           </div>
         </div>
 
         <div class="row">
           <div class="input-field col s6">
             <input id="emailaddress" type="email" class="validate" required>
-            <label for="emailaddress">Email Address</label>
+            <label id="lbl-email" for="emailaddress">Email Address</label>
           </div>
           <div class="input-field col s6">
             <input id="phone" type="tel" class="validate" required>
-            <label for="phone">Phone</label>
+            <label id="lbl-phone" for="phone">Phone</label>
           </div>
         </div>
 
         <div class="row">
           <div class="input-field col s6">
             <select class="materialSelect" id="country" name="country"></select>
-            <label for="country">Country</label>
+            <label id="lbl-country" for="country">Country</label>
           </div>
           <div class="input-field col s6">
             <select class="materialSelect" id="state" name="state"></select>
-            <label for="state">State</label>
+            <label id="lbl-state" for="state">State</label>
           </div>
         </div>
 
@@ -265,7 +265,7 @@
       
       <div class="row" style="margin-top: 20px;">
         <div class="col">
-          <button class="btn waves-effect waves-light" type="submit" value="Show">
+          <button id="btn-show" class="btn waves-effect waves-light" type="submit" value="Show">
             Show
           </button>
         </div>
@@ -277,16 +277,16 @@
     <div class="row wrapper" style="margin-top: 30px; max-width: 570px;">
       <div id="chart" class="col ws-basic-card-default" style="width: 100%;">
         <div class="tl">
-          <p class="lab-value">Flailing</p>
+          <p id="txt-flailing" class="lab-value">Flailing</p>
         </div>
         <div class="tr">
-          <p class="lab-value">Flying</p>
+          <p id="txt-flying" class="lab-value">Flying</p>
         </div>
         <div class="bl">
-          <p class="lab-value">Frozen</p>
+          <p id="txt-frozen" class="lab-value">Frozen</p>
         </div>
         <div class="br">
-          <p class="lab-value">Failing</p>
+          <p id="txt-failing" class="lab-value">Failing</p>
         </div>
         <span class="dot" id="chartMarker" style="display: none;"></span>
       </div>

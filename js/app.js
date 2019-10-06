@@ -7,7 +7,7 @@ $(document).ready(function(){
     $("#DCMScore").text(DCMScore());
   });
 
-  $( "#DXQuestions").submit(function( event ) {
+  $("#DXQuestions").submit(function( event ) {
     var DCMScoreVal = DCMScore();
     var LeadershipScoreVal = LeadershipScore();
 
@@ -49,9 +49,6 @@ $(document).ready(function(){
     magnumSave("DXMap", DXMap);
     event.preventDefault();
   });
-
-  // Materialize plugin
-  $('select').formSelect();
 
   // setup listener for custom event to re-initialize on change
   $('.materialSelect').on('contentChanged', function() {
@@ -109,13 +106,24 @@ $(document).ready(function(){
 
   $.getJSON("../localizations/english.json", function(data) {
     $.each(data, function(key, val) {
-      var divId = "#" + key.substr(1);
-      origin = $(divId).html();
-      $(divId).html(localize(key, origin));
+      if ( !key.startsWith("%opt-") ) {
+        var divId = "#" + key.substr(1);
+        origin = $(divId).html();
+        $(divId).html(localize(key, origin));
+      }
     });
+  });
+
+  $('#role option').each(function(i) {
+    var varString = "%opt-role-" + i;
+    origin = $(this).text();
+    $(this).text(localize(varString, origin));
   });
   
   document.documentElement.lang = String.locale || document.documentElement.lang;
+
+  // Materialize plugin
+  $('select').formSelect();
 });
 
 function LeadershipScore() {
