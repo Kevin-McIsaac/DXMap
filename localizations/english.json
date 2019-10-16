@@ -1,0 +1,58 @@
+{
+  "%leadership-header": "Leaderships and Execution",
+
+  "%leadership-question1": "Who is setting your organisation’s transformation vision?",
+  "%leadership-question1-option1": "IT/CTO",
+  "%leadership-question1-option2": "Other business unit managers",
+  "%leadership-question1-option3": "CEO/senior leadership team",
+  "%leadership-question1-option4": "Board",
+
+  "%leadership-question2": "Over what timeframe does your organisation’s transformation vision stretch?",
+  "%leadership-question2-option1": "Less than one year",
+  "%leadership-question2-option2": "One to two years",
+  "%leadership-question2-option3": "Two to three years",
+  "%leadership-question2-option4": "Three to five years or more",
+
+  "%leadership-question3": "How would you rate your organisation’s leadership and culture in terms of acceptance of change?",
+  "%leadership-question3-option1": "They do not see the need for change",
+  "%leadership-question3-option2": "They see the need but have not developed a change program",
+  "%leadership-question3-option3": "They are developing and communicating a change program",
+  "%leadership-question3-option4": "They have implemented and communicated a change program",
+
+  "%leadership-question4": "Is your organisation able to measure and understand the returns of its transformation program?",
+  "%leadership-question4-option1": "There are no metrics to measure value",
+  "%leadership-question4-option2": "Metrics are in place but there is no feedback mechanism",
+  "%leadership-question4-option3": "Metrics are used for continuous feedback and improvement",
+
+  "%dcm-header": "Data Capability Maturity",
+
+  "%dcm-question": "What level of data capability is your organisation?",
+  "%dcm-question-option1": "Digitise – we have applications that have digitised all of the important operational and customer business processes",
+  "%dcm-question-option2": "Consolidate – we have brought together in a single repository all of the digitised information from all of our key applications",
+  "%dcm-question-option3": "Align – we are able to align the consolidated data from multiple applications to generate actionable insights",
+  "%dcm-question-option4": "Predict – we can use our aligned data to generate predictions about key business outcomes",
+  "%dcm-question-option5": "Prescribe – we automatically prescribe the best course of action, based on the predictions of the aligned data",
+
+  "%lbl-first-name": "First Name",
+  "%lbl-last-name": "Last Name",
+  "%lbl-company-name": "Company Name",
+  "%lbl-role": "Role",
+  "%lbl-email": "Email Address",
+  "%lbl-phone": "Phone",
+  "%lbl-country": "Country",
+  "%lbl-state": "State",
+
+  "%opt-role-0": "Choose your option",
+  "%opt-role-1": "C-Level Executive",
+  "%opt-role-2": "Sr VP & VP",
+  "%opt-role-3": "Sr Director & Director",
+  "%opt-role-4": "Sr Manager & Manager",
+  "%opt-role-5": "Data Analyst",
+
+  "%btn-show": "Show",
+
+  "%txt-flailing": "Flailing",
+  "%txt-flying": "Flying",
+  "%txt-frozen": "Frozen",
+  "%txt-failing": "Failing"
+}

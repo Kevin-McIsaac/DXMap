@@ -1,0 +1,58 @@
+{
+  "%leadership-header": "リーダーシップと実行力について",
+
+  "%leadership-question1": "デジタル変革のビジョンを策定しているのは誰ですか？",
+  "%leadership-question1-option1": "情報システム部/CTO",
+  "%leadership-question1-option2": "その他のビジネス部門の管理職",
+  "%leadership-question1-option3": "CEO/上級役員メンバー",
+  "%leadership-question1-option4": "経営会議のボードメンバー",
+
+  "%leadership-question2": "デジタル変革のビジョンはこの先何年間のビジョンとして描いていますか？",
+  "%leadership-question2-option1": "1年以内",
+  "%leadership-question2-option2": "1～2年",
+  "%leadership-question2-option3": "2～3年",
+  "%leadership-question2-option4": "3～5年、またはそれ以上",
+
+  "%leadership-question3": "あなたの会社の経営陣と企業文化に関して、どのくらい変化に対して受容性があると思いますか？",
+  "%leadership-question3-option1": "経営陣は変わる必要がないと思っている。",
+  "%leadership-question3-option2": "経営陣は変わる事の必要性は理解しているが、変化するための具体的なプログラムは策定されていない。",
+  "%leadership-question3-option3": "経営陣は変化をするためのプログラムを開発しようとしており、具体的なコミュニケーションを行っている。",
+  "%leadership-question3-option4": "経営陣は変化をするためのプログラムを開発し、具体的なコミュニケーションがあった。",
+
+  "%leadership-question4": "あなたの会社は変革プログラムの実施効果を計測・把握する事ができていますか？",
+  "%leadership-question4-option1": "実施効果を計測するための指標は定義されていない。",
+  "%leadership-question4-option2": "計測指標は設定されているが、フィードバックの仕組みが作られていない。",
+  "%leadership-question4-option3": "計測指標は継続的なフィードバックと改善の仕組みと共に設定されている。",
+
+  "%dcm-header": "データ活用の成熟度について",
+
+  "%dcm-question": "あなたの会社のデータ活用はどのくらいの成熟度ですか？",
+  "%dcm-question-option1": "【デジタル化】主要な社内プロセスと顧客関連業務はすべて業務アプリケーションによりデジタル処理されている。",
+  "%dcm-question-option2": "【データ統合】主要なシステムによりデジタル処理されたデータは一つの統合されたレポジトリ（データウェアハウスやデータレイクなど）に集約されている。",
+  "%dcm-question-option3": "【データ整理】複数システムから取得され統合されたデータがすでに整理されており、分析により具体的なアクションのためのインサイトを得られるようになっている。",
+  "%dcm-question-option4": "【予測】整理されたデータを活用することで主要なビジネスの予測値を取得できるようになっている。",
+  "%dcm-question-option5": "【最適化】予測値を元に自動的に最適なアクションを取れるような仕組みが作られている。",
+
+  "%lbl-first-name": "姓名（漢字）",
+  "%lbl-last-name": "姓名（カナ）",
+  "%lbl-company-name": "会社名",
+  "%lbl-role": "所属部署・役職名",
+  "%lbl-email": "メールアドレス",
+  "%lbl-phone": "電話番号",
+  "%lbl-country": "国",
+  "%lbl-state": "都道府県",
+
+  "%opt-role-0": "役職について",
+  "%opt-role-1": "役員・経営層",
+  "%opt-role-2": "本部長クラス",
+  "%opt-role-3": "部長クラス",
+  "%opt-role-4": "課長・係長クラス",
+  "%opt-role-5": "データアナリスト、実務担当者",
+
+  "%btn-show": "表示する",
+
+  "%txt-flailing": "空回り",
+  "%txt-flying": "革新",
+  "%txt-frozen": "足踏み",
+  "%txt-failing": "限定的"
+}
