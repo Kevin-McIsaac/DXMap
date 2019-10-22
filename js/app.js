@@ -30,6 +30,17 @@ $(document).ready(function(){
     DXMap["State"] = $("#state").val();
     DXMap["Date"] = new Date().toISOString();
 
+    // Get query parameters
+    if (typeof domo.env.utm_source !== 'undefined') {
+      DXMap["utmSource"] = domo.env.utm_source;
+    }
+    if (typeof domo.env.utm_medium !== 'undefined') {
+      DXMap["utmMedium"] = domo.env.utm_medium;
+    }
+    if (typeof domo.env.utm_campaign !== 'undefined') {
+      DXMap["utmCampaign"] = domo.env.utm_campaign;
+    }
+
     // Convert scores
     if (LeadershipScoreVal >= 0 && LeadershipScoreVal <= 1) {
       DXMap["LeadershipScorePercent"] = 0;
