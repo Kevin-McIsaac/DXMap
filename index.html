@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
   <head>
     <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -7,159 +8,203 @@
     <form id="DXQuestions"  action="">
 
       <div class="row">
-        <h5 class="col">Leaderships and Execution (<div id="LeadershipScore" style="display: inline">0</div>/15)</h5>
+        <h5 class="col">
+          <span id="leadership-header">Leaderships and Execution</span> (<div id="LeadershipScore" style="display: inline">0</div>/15)
+        </h5>
       </div>
 
       <div class="question">
-        <p class="compact">
+        <p id="leadership-question1" class="compact">
           Who is setting your organisation’s transformation vision?
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="Who" type="radio" value=1>
-            <span>IT/CTO</span>
+            <span id="leadership-question1-option1">
+              IT/CTO
+            </span>
           </label>
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="Who" type="radio" value=2>
-            <span>Other business unit managers</span>
+            <span id="leadership-question1-option2">
+              Other business unit managers
+            </span>
           </label>
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="Who" type="radio" value=3>
-            <span>CEO/senior leadership team</span>
+            <span id="leadership-question1-option3">
+              CEO/senior leadership team
+            </span>
           </label>
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="Who" type="radio" value=4>
-            <span>Board</span>
+            <span id="leadership-question1-option4">
+              Board
+            </span>
           </label>
         </p>
       </div>
 
       <div class="question">
-        <p class="compact">
+        <p id="leadership-question2" class="compact">
           Over what timeframe does your organisation’s transformation vision stretch?
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="Timeframe" type="radio" value=1>
-            <span>Less than one year</span>
+            <span id="leadership-question2-option1">
+              Less than one year
+            </span>
           </label>
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="Timeframe" type="radio" value=2>
-            <span>One to two years</span>
+            <span id="leadership-question2-option2">
+              One to two years
+            </span>
           </label>
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="Timeframe" type="radio" value=3>
-            <span>Two to three years</span>
+            <span id="leadership-question2-option3">
+              Two to three years
+            </span>
           </label>
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="Timeframe" type="radio" value=4>
-            <span>Three to five years or more</span>
+            <span id="leadership-question2-option4">
+              Three to five years or more
+            </span>
           </label>
         </p>
       </div>
 
       <div class="question">
-        <p class="compact">
+        <p id="leadership-question3" class="compact">
           How would you rate your organisation’s leadership and culture in terms of acceptance of change?
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="Change" type="radio" value=1>
-            <span>They do not see the need for change</span>
+            <span id="leadership-question3-option1">
+              They do not see the need for change
+            </span>
           </label>
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="Change" type="radio" value=2>
-            <span>They see the need but have not developed a change program</span>
+            <span id="leadership-question3-option2">
+              They see the need but have not developed a change program
+            </span>
           </label>
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="Change" type="radio" value=3>
-            <span>They are developing and communicating a change program</span>
+            <span id="leadership-question3-option3">
+              They are developing and communicating a change program
+            </span>
           </label>
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="Change" type="radio" value=4>
-            <span>They have implemented and communicated a change program</span>
+            <span id="leadership-question3-option4">
+              They have implemented and communicated a change program
+            </span>
           </label>
         </p>
       </div>
 
       <div class="question">
-        <p class="compact">
+        <p id="leadership-question4" class="compact">
           Is your organisation able to measure and understand the returns of its transformation program?
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="Value" type="radio" value=1>
-            <span>There are no metrics to measure value</span>
+            <span id="leadership-question4-option1">
+              There are no metrics to measure value
+            </span>
           </label>
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="Value" type="radio" value=2>
-            <span>Metrics are in place but there is no feedback mechanism</span>
+            <span id="leadership-question4-option2">
+              Metrics are in place but there is no feedback mechanism
+            </span>
           </label>
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="Value" type="radio" value=3>
-            <span>Metrics are used for continuous feedback and improvement</span>
+            <span id="leadership-question4-option3">
+              Metrics are used for continuous feedback and improvement
+            </span>
           </label>
         </p>
       </div>
 
       <div class="row">
-        <h5 class="col">Data Capability Maturity (<div id="DCMScore" style="display: inline">0</div>/5)</h5>
+        <h5 class="col">
+          <span id="dcm-header">Data Capability Maturity</span> (<div id="DCMScore" style="display: inline">0</div>/5)
+        </h5>
       </div>
 
       <div class="question">
-        <p class="compact">
+        <p id="dcm-question" class="compact">
           What level of data capability is your organisation?
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="DCM" type="radio" value=1>
-            <span>Digitise – we have applications that have digitised all of the important operational and customer business processes</span>
+            <span id="dcm-question-option1">
+              Digitise – we have applications that have digitised all of the important operational and customer business processes
+            </span>
           </label>
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="DCM" type="radio" value=2>
-            <span>Consolidate – we have brought together in a single repository all of the digitised information from all of our key applications</span>
+            <span id="dcm-question-option2">
+              Consolidate – we have brought together in a single repository all of the digitised information from all of our key applications
+            </span>
           </label>
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="DCM" type="radio" value=3>
-            <span>Align – we are able to align the consolidated data from multiple applications to generate actionable insights</span>
+            <span id="dcm-question-option3">
+              Align – we are able to align the consolidated data from multiple applications to generate actionable insights
+            </span>
           </label>
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="DCM" type="radio" value=4>
-            <span>Predict – we can use our aligned data to generate predictions about key business outcomes</span>
+            <span id="dcm-question-option4">
+              Predict – we can use our aligned data to generate predictions about key business outcomes
+            </span>
           </label>
         </p>
         <p class="compact">
           <label class="primary">
             <input class="with-gap" name="DCM" type="radio" value=5>
-            <span>Prescribe – we automatically prescribe the best course of action, based on the predictions of the aligned data</span>
+            <span id="dcm-question-option5">
+              Prescribe – we automatically prescribe the best course of action, based on the predictions of the aligned data
+            </span>
           </label>
         </p>
       </div>
@@ -168,18 +213,18 @@
         <div class="row">
           <div class="input-field col s6">
             <input id="firstName" type="text" class="validate" required>
-            <label for="firstName">First Name</label>
+            <label id="lbl-first-name" for="firstName">First Name</label>
           </div>
           <div class="input-field col s6">
             <input id="lastName" type="text" class="validate" required>
-            <label for="lastName">Last Name</label>
+            <label id="lbl-last-name" for="lastName">Last Name</label>
           </div>
         </div>
 
         <div class="row">
           <div class="input-field col s6">
             <input id="companyName" type="text" class="validate" required>
-            <label for="companyName">Company Name</label>
+            <label id="lbl-company-name" for="companyName">Company Name</label>
           </div>
           <div class="input-field col s6">
             <select id="role">
@@ -190,29 +235,29 @@
               <option value="Sr Manager & Manager">Sr Manager & Manager</option>
               <option value="Data Analyst">Data Analyst</option>
             </select>
-            <label for="role">Role</label>
+            <label id="lbl-role" for="role">Role</label>
           </div>
         </div>
 
         <div class="row">
           <div class="input-field col s6">
             <input id="emailaddress" type="email" class="validate" required>
-            <label for="emailaddress">Email Address</label>
+            <label id="lbl-email" for="emailaddress">Email Address</label>
           </div>
           <div class="input-field col s6">
             <input id="phone" type="tel" class="validate" required>
-            <label for="phone">Phone</label>
+            <label id="lbl-phone" for="phone">Phone</label>
           </div>
         </div>
 
         <div class="row">
           <div class="input-field col s6">
             <select class="materialSelect" id="country" name="country"></select>
-            <label for="country">Country</label>
+            <label id="lbl-country" for="country">Country</label>
           </div>
           <div class="input-field col s6">
             <select class="materialSelect" id="state" name="state"></select>
-            <label for="state">State</label>
+            <label id="lbl-state" for="state">State</label>
           </div>
         </div>
 
@@ -220,7 +265,7 @@
       
       <div class="row" style="margin-top: 20px;">
         <div class="col">
-          <button class="btn waves-effect waves-light" type="submit" value="Show">
+          <button id="btn-show" class="btn waves-effect waves-light" type="submit" value="Show">
             Show
           </button>
         </div>
@@ -232,25 +277,28 @@
     <div class="row wrapper" style="margin-top: 30px; max-width: 570px;">
       <div id="chart" class="col ws-basic-card-default" style="width: 100%;">
         <div class="tl">
-          <p class="lab-value">Flailing</p>
+          <p id="txt-flailing" class="lab-value">Flailing</p>
         </div>
         <div class="tr">
-          <p class="lab-value">Flying</p>
+          <p id="txt-flying" class="lab-value">Flying</p>
         </div>
         <div class="bl">
-          <p class="lab-value">Frozen</p>
+          <p id="txt-frozen" class="lab-value">Frozen</p>
         </div>
         <div class="br">
-          <p class="lab-value">Failing</p>
+          <p id="txt-failing" class="lab-value">Failing</p>
         </div>
         <span class="dot" id="chartMarker" style="display: none;"></span>
       </div>
     </div>
     <!-- End of chart -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/materialize.min.js"></script>
-    <script src="js/countries.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/countries.js"></script>
+    <script type="text/javascript" src="js/l10n.min.js"></script>
+    <script type="text/javascript" src="js/localizations.js"></script>
+
     <!-- domo.js optional utils -->
     <script src="js/domo.js"></script>
     <script src="js/app.js"></script>

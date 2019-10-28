@@ -7,7 +7,7 @@ $(document).ready(function(){
     $("#DCMScore").text(DCMScore());
   });
 
-  $( "#DXQuestions").submit(function( event ) {
+  $("#DXQuestions").submit(function( event ) {
     var DCMScoreVal = DCMScore();
     var LeadershipScoreVal = LeadershipScore();
 
@@ -30,6 +30,17 @@ $(document).ready(function(){
     DXMap["State"] = $("#state").val();
     DXMap["Date"] = new Date().toISOString();
 
+    // Get query parameters
+    if (typeof domo.env.utm_source !== 'undefined') {
+      DXMap["utmSource"] = domo.env.utm_source;
+    }
+    if (typeof domo.env.utm_medium !== 'undefined') {
+      DXMap["utmMedium"] = domo.env.utm_medium;
+    }
+    if (typeof domo.env.utm_campaign !== 'undefined') {
+      DXMap["utmCampaign"] = domo.env.utm_campaign;
+    }
+
     // Convert scores
     if (LeadershipScoreVal >= 0 && LeadershipScoreVal <= 1) {
       DXMap["LeadershipScorePercent"] = 0;
@@ -49,9 +60,6 @@ $(document).ready(function(){
     magnumSave("DXMap", DXMap);
     event.preventDefault();
   });
-
-  // Materialize plugin
-  $('select').formSelect();
 
   // setup listener for custom event to re-initialize on change
   $('.materialSelect').on('contentChanged', function() {
@@ -91,6 +99,42 @@ $(document).ready(function(){
   // Set chart height equal to width
   var cw = $("#chart").width();
   $("#chart").css({"height": cw + 'px'});
+
+  // l10n - localizations
+  var origin;
+  if (location.hash) {
+    String.locale = location.hash.substr(1);	
+  }
+  
+  var localize = function (string, fallback) {
+    var localized = string.toLocaleString();
+    if (localized !== string) {
+      return localized;
+    } else {
+      return fallback;
+    }
+  };
+
+  $.getJSON("../localizations/english.json", function(data) {
+    $.each(data, function(key, val) {
+      if ( !key.startsWith("%opt-") ) {
+        var divId = "#" + key.substr(1);
+        origin = $(divId).html();
+        $(divId).html(localize(key, origin));
+      }
+    });
+  });
+
+  $('#role option').each(function(i) {
+    var varString = "%opt-role-" + i;
+    origin = $(this).text();
+    $(this).text(localize(varString, origin));
+  });
+  
+  document.documentElement.lang = String.locale || document.documentElement.lang;
+
+  // Materialize plugin
+  $('select').formSelect();
 });
 
 function LeadershipScore() {

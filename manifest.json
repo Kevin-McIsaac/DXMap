@@ -95,6 +95,18 @@
           {
             "name": "DCMScorePercent",
             "type": "LONG"
+          },
+          {
+            "name": "utmSource",
+            "type": "STRING"
+          },
+          {
+            "name": "utmMedium",
+            "type": "STRING"
+          },
+          {
+            "name": "utmCampaign",
+            "type":"STRING"
           }
         ]
       },
